@@ -1,36 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Resume</title>
-        <style>
-            body{
-                background-color: rgb(44, 42, 42);
-                font-family: poppins;
-                font-size: 20px;
-                }
-            h1{
-                color:rgb(5, 5, 54);   
-            }
-            .overall{
-                background-color: white;
-                margin-left: 200px;
-                margin-right: 200px;
-                padding: 5%;
-            }
-            .links{
-                background-color: rgb(178, 196, 213);
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-            
-        </style>
-    </head>
-    <body>
-        <div class="overall">
-          
-        <b><p style="font-size: 40px;font-family:'poppins';">SADHANA K</p></b>
-        <div class="links">
+<html>
+<head>
+    <title>Sadhana K - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+            margin: 0;   
+            padding: 30px;
+            color: #333333;
+        }
+        .resume {
+            background-color: white;         
+            max-width: 850px;
+            margin: auto;
+            padding: 35px;
+        }
+
+        h1 {
+            color: #203c5a;
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            background-color: #dce7f1;
+            padding: 12px;
+            line-height: 2;
+        }
+
+        a {
+            color: #203c5a;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #203c5a;
+            font-size: 19px;
+            border-bottom: 2px solid #9bb5ce;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        p, li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .date {
+            color: #64778a;
+            font-size: 13px;
+        }
+
+        .resume {
+                padding: 20px;
+        }
+
+        
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content {
+    order: 1;
+}
+
+#profilePhoto {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    display: none;
+    order: 2;
+    margin-left: auto;
+}
+
+.buttons {
+    margin-top: 12px;
+}
+
+.download-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.download-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-action p {
+    margin: 4px 0;
+    text-align: center;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border: none;
+    background-color: #203c5a;
+    color: white;
+    border-radius: 4px;
+}
+
+.dark-mode {
+    background-color: #181818;
+    color: #eeeeee;
+}
+
+.dark-mode .resume {
+    background-color: #242424;
+}
+
+.dark-mode h1,
+.dark-mode h2 {
+    color: #9bbde0;
+}
+
+.dark-mode .contact {
+    background-color: #343f4a;
+}
+
+.dark-mode a {
+    color: #9bbde0;
+}
+
+.dark-mode h2 {
+    border-bottom-color: #64778a;
+}
+
+    </style>
+</head>
+
+
+<script>
+    let count = 0;
+
+    function togglePhoto() {
+        let photo = document.getElementById("profilePhoto");
+
+        if (photo.style.display === "block") {
+            photo.style.display = "none";
+        } else {
+            photo.style.display = "block";
+        }
+    }
+
+    function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+
+    function downloadResume() {
+        count++;
+        document.getElementById("downloadCount").textContent = count;
+    }
+</script>
+
+<body>
+
+<div class="resume">
+
+    
+<div class="header">
+    <img id="profilePhoto" src="Photo1.jpeg" alt="My Photo">
+
+    <div class="header-content">
+        <h1>SADHANA K</h1>
+
+        <div class="buttons download-controls" data-html2canvas-ignore="true">
+            <button onclick="togglePhoto()">Show / Hide Photo</button>
+            <button onclick="toggleMode()">Light / Dark Mode</button>
+        </div>
+    </div>
+</div>
+
+<div class="contact">
+    <table width="140%">
+        <tr>
+            <td>☎ 9876543210</td>
+            <td><i class="fa-brands fa-linkedin" style="color:black"></i>
+                <a href="https://www.linkedin.com/in/sadhana-6152a4">https://www.linkedin.com/in/sadhana-6152a4</a>
+            </td>
+        </tr>
+        <tr>
+            <td>✉ sadhana271529@gmail.com</td>
+            <td><i class="fa-brands fa-github" style="color:black"></i>
+                <a href="https://github.com/Sadhana-20">https://github.com/Sadhana-20</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+    <!-- <div class="contact">
             <table width="140%">
                 <tr>
                     <td><img src="https://getdrawings.com/free-icon-bw/phone-icon-png-transparent-11.png" width="20px" height="20px">&nbsp 9384419354</td>
@@ -41,67 +213,88 @@
                     <td><img src="https://www.shareicon.net/data/2017/05/09/885761_global_512x512.png" width="20px" height="20px"> <a href="https://github.com/Sadhana-20" target="_blank">github.com/Sadhana-20</a></td>
                 </tr>
             </table>
+    </div> -->
+
+    <h2>PROFILE</h2>
+    <p>
+        A Computer Science Engineering student with a strong interest in full-stack development,
+        seeking an entry-level or internship opportunity to learn, build practical skills, and contribute to
+        real-world projects while growing as a software developer.
+    </p>
+
+    <h2>EDUCATION</h2>
+
+    <h3>B.E. Computer Science Engineering</h3>
+    <p>
+        S.A. Engineering College (Autonomous)<br>
+        2023 - 2027 | CGPA: 9.16
+    </p>
+
+    <h3>12th Board - CBSE</h3>
+    <p>
+        Sri Krish International School<br>
+        2023 | 79.6%
+    </p>
+
+    <h3>10th Board - CBSE</h3>
+    <p>
+        Chinmaya Vidyalaya Senior Secondary School<br>
+        2021 | 83.6%
+    </p>
+
+    <h2>TECHNICAL SKILLS</h2>
+    <ul>
+        <li>Programming: Java, C, Python (Basic)</li>
+        <li>Frontend: HTML, CSS, JavaScript (Basic)</li>
+        <li>Database: MongoDB (Basic)</li>
+        <li>Tools: Figma, Canva, WordPress</li>
+    </ul>
+
+    <h2>INTERNSHIPS</h2>
+
+    <h3>Full Stack Development - Java</h3>
+    <p class="date">APPOTECH R&D Solutions | Verify internship dates</p>
+    <p>Learned frontend technologies and Java-based web development.</p>
+
+    <h3>WordPress and Figma</h3>
+    <p class="date">DETQEL Corp | June - August 2025</p>
+    <p>Worked with website development and UI/UX design tools.</p>
+
+    <h2>PROJECTS</h2>
+
+    <h3>Recipe Sharing Platform</h3>
+    <p>Created a recipe-sharing platform with ingredient-based filtering using MERN stack.</p>
+
+    <h3>Movie Ticket Booking Website</h3>
+    <p>Developed a website for booking movie tickets and snacks.</p>
+
+    <h3>NGO Charity Website</h3>
+    <p>Designed a charity website using WordPress and Figma.</p>
+
+    <h3>Thai Restaurant App</h3>
+    <p>Designed a restaurant application interface using Figma.</p>
+
+    <h2>CERTIFICATIONS</h2>
+    <ul>
+        <li>LinkedIn - Career Essentials in Software Development</li>
+        <li>Mendix - Rapid Developer</li>
+        <li>AWS Academy - Cloud Foundations</li>
+    </ul>
+
+    <h2>ACHIEVEMENTS</h2>
+    <ul>
+        <li>Won second place in IDEATHON '25 for UI/UX app design.</li>
+        <li>Secured second rank in the department with a 9.42 GPA in Semester 1.</li>
+    </ul>
+
+    <div class="buttons download-controls" data-html2canvas-ignore="true">
+        <div class="download-action">
+            <button onclick="downloadResume()">Download Resume</button>
+            <p>Download count: <span id="downloadCount">0</span></p>
         </div>
-        <h2 style="background-color: rgb(178, 196, 213);width: 18%;">PROFILE</h2>
-        <hr>
-        <p>A Computer Science Engineering student with a strong interest in full-stack development,
-            seeking an entry-level or internship opportunity to learn, build practical skills, and contribute to
-            real-world projects while growing as a software developer</p>
-        <h2 style="background-color: rgb(178, 196, 213);width: 20%;">EDUCATION</h2>
-        <hr>
-        <table width="100%">
-            <tr>
-                <td><b>B.E COMPUTER SCIENCE ENGINEERING</b></td>
-                <td><b>2027 - Pursuing</b></td>
-            </tr>
-            <tr>
-                <td>S.A.ENGINEERING COLLEGE ( AUTONOMOUS)<br>9.16 CGPA </td>
-            </tr>
-            <tr>
-                <td><b>12TH BOARD</b></td>
-                <td><b>2023</b></td>
-            </tr>
-            <tr>
-                <td>SRI KRISH INTERNATIONAL SCHOOL (CBSE)<br>79.6%</td>
-            </tr>
-            <tr>
-                <td><b>10TH BOARD</b></td>
-                <td><b>2021</b></td>
-            </tr>
-            <tr>
-                <td>CHINMAYA VIDYALAYA SENIOR SECONDARY SCHOOL<br>83.6%</td>
-            </tr>
-        </table>
-        <h2 style="background-color: rgb(178, 196, 213);width: 15%;">SKILLS</h2>
-        <hr>
-        <ul>
-            <li>FRONTEND: HTML, CSS , JS (BASICS)</li>
-            <li>Programming Languages: Java, C, Python (Basic)</li>
-            <li>Database: MongoDb(Basic)</li>
-            <li>Tools: FIGMA, CANVA, WORDPRESS</li>
-        </ul>
-        <h2 style="background-color: rgb(178, 196, 213);width: 60%;">CERTIFICATIONS AND INTERNSHIPS</h2>
-        <hr>
-        <ul>
-            <li>Internship in Wordpress and FIGMA - Detqel Corp (June-August 2025)</li>
-            <li>Internship in FULL STACK DEVELOPMENT (JAVA) - APPROTECH R&D SOLUTIONS ( MAY 2025-JUNE 2025)</li>
-            <li>LinkedIn - Career Essentials in Software Development</li>
-            <li>MENDIX - Rapid Developer</li>
-            <li>AWS Academy Graduate - Cloud Foundations - Training badge</li>
-        </ul>
-        <h2 style="background-color: rgb(178, 196, 213);width: 28%;">ACHIEVEMENTS</h2>
-        <hr>
-        <ul>
-            <li>Won Second place in IDEATHON’25 an UI UX App designing competition</li>
-            <li>Secured 2nd rank in the department with a 9.42 GPA during the 1st semester</li>
-        </ul>
-        <h2 style="background-color: rgb(178, 196, 213);width: 20%;">PROJECTS</h2>
-        <hr>
-        <ul>
-            <li>E-commerce Platform Development - Developed an online movie ticket and snacks booking website.</li>
-            <li>Designed a Thai food restaurant app design in FIGMA</li>
-            <li>Developed a NGO - Charity website using Wordpress and FIGMA.</li>
-            <li>Recipe Sharing platform with ingredient based filtering using MERN stack.</li>
-        </ul>
-        </div>
+    </div>
+
+</div>
+
+</body>
 </html>

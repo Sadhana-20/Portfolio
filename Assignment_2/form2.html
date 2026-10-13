@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <style>
+            .show{
+                color:red;
+            }
+            .hide{
+                color:green;
+            } 
+        </style>
+    </head>
+    <body>
+        <button id="show">Show</button>
+        <label id="showlabel"></label>
+        <script>
+
+            // var count=0;
+            // const button = document.getElementById('count');
+            // const label = document.getElementById('plus');
+            // button.addEventListener('click', function(){
+            //     count=count+1;
+            //     label.textContent=`Counter : ${count}`
+            // })
+
+            var boolean;
+            const button = document.getElementById('show');
+            const label = document.getElementById('showlabel');
+            button.addEventListener('click',function(){
+                boolean = !boolean;
+                label.textContent=`${boolean?"Label is variable":"Label is not visible"}`
+                label.className=boolean?'show':'hide';
+            })
+
+
+
+        </script>
+    </body>
+</html>
